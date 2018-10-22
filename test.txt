@@ -1,3 +1,9 @@
+如何将本地代码提交到github远程仓库
+　　今天提交本地代码到远程仓库，没有成功过，后来经过多方试验，终于取得了成功。
+　　首先，在本地创建本地仓库（也就是在项目的根目录下执行"git init"命令，生成.git文件就算是成功了，注意.git文件时隐藏文件，有些电脑可能设置了不可见隐藏文件，这时候会误以为命令没有执行成功，就会再次输入git init命名，就会发现下面会给予这样的提示“Reinitialized existing Git repository in ....?”，这个人就是我...）。
+　　接着，输入“git remote add origin [远程仓库路径]”就可以让本地仓库与远程仓库建立连接。
+　　最后，输入"git add *"、"git commit -m '备注'?"、"git push origin master"提交项目。
+
 Git 基本操作
 Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。本章将对有关创建与提交你的项目快照的命令作介绍。
 
@@ -349,6 +355,7 @@ git commit、git push、git pull、 git fetch、git merge 的含义与区别
 ?git merge：是用于从指定的commit(s)合并到当前分支，用来合并两个分支；
 $ git merge -b  // 指将 b 分支合并到当前分支
 git pull?相当于?git fetch + git merge。
+
 
 Git 分支管理
 几乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。
